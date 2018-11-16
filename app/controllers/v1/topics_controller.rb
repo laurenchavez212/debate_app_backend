@@ -2,11 +2,12 @@ class V1::TopicsController < ApplicationController
     # These are methods(functions)
     before_action :authenticate_user!
     def index 
+        # byebug
         # @ sign means global variable
         # variable topics is each item in Topic table 
         @topics = Topic.all
         # last line is always returned
-        render json: @topics, status: :ok
+        render :index, status: :ok
     end
 
     def create
@@ -14,7 +15,7 @@ class V1::TopicsController < ApplicationController
         @topic = Topic.new(topic_params)
         # save your new topic once params go through
         @topic.save
-        render json: @topic, status: :created
+        render :create, status: :created
     end
 
     def destroy 
