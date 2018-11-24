@@ -1,0 +1,9 @@
+json.call(
+    argument, 
+    :id,
+    :user_id, 
+    :topic_id, 
+    :content, 
+    :link, 
+    :stance
+)
