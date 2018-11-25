@@ -21,6 +21,7 @@ class V1::SessionsController < ApplicationController
             head(:unauthorized)
         end
     end 
+    
 
     private
 

@@ -33,8 +33,8 @@ class V1::TopicsController < ApplicationController
             head(:ok)
         else 
             head(:unprocessable_entry)
-        end 
-    end
+        end
+     end
     
 
 # Anything after 'private' restricts the user from accessing the params -- keeps it secret
