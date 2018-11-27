@@ -16,6 +16,8 @@ class V1::TopicsController < ApplicationController
 
         @arguments = Argument.where(topic_id: @topic.id)
 
+        @votes = Vote.all
+
         # render json: @topic, include: Argument.where(topic_id: @topic.id)
     end
 
@@ -29,7 +31,7 @@ class V1::TopicsController < ApplicationController
 
     def destroy 
         @topic = current_user.topics.where(id: params[:id]).first
-        if @topic.destroy
+        if @topic&.destroy
             head(:ok)
         else 
             head(:unprocessable_entry)

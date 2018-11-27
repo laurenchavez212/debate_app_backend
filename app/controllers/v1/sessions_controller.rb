@@ -1,5 +1,4 @@
 class V1::SessionsController < ApplicationController
-    # before_action :authenticate_user! 
     def show
         current_user ? head(:ok) : head(:unauthorized)
     end

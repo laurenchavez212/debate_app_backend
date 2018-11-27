@@ -6,8 +6,7 @@ class CreateArguments < ActiveRecord::Migration[5.2]
       t.text :content
       t.string :link
       t.boolean :stance
-
-      t.timestamps
+       t.timestamps
     end
   end
 end

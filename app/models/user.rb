@@ -6,5 +6,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :topics
-  has_many :arguments, through: :topics 
+  has_many :arguments
+  has_many :votes
 end

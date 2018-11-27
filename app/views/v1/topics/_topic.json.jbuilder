@@ -2,5 +2,7 @@ json.call(
     topic, 
     :id,
     :title, 
-    :description
+    :description,
+    :image,
+    :user_id
 )

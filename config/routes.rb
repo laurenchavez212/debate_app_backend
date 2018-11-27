@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :v1, defaults: { format: :json} do
     resources :topics
     resources :arguments
-    resource :sessions, only: [:create, :destroy]
+    resource :sessions
+    resource :votes
     end
 end
