@@ -4,5 +4,5 @@ json.call(
     :title, 
     :description,
     :image,
-    :user_id
+    :user_id,
 )

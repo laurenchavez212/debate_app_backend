@@ -42,6 +42,6 @@ class V1::TopicsController < ApplicationController
 # Anything after 'private' restricts the user from accessing the params -- keeps it secret
     private
     def topic_params
-        params.require(:topic).permit(:title, :description, :user_id)
+        params.require(:topic).permit(:title, :description, :user_id, :image)
     end
 end

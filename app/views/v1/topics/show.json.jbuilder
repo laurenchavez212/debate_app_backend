@@ -4,7 +4,8 @@ json.topic do
     json.description @topic.description
     json.id @topic.id
     json.user_id @topic.user_id
-
+    json.image @topic.image
+    
 end
 
 json.arguments do

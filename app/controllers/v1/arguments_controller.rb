@@ -24,17 +24,27 @@ class V1::ArgumentsController < ApplicationController
         @argument = current_user.arguments.where(id: params[:id]).first
         puts @argument
         puts current_user.id
-        if @argument&.destroy
-            head(:ok)
+        
+        unless @argument.nil?
+            @argument.votes.destroy_all
+            if @argument.destroy
+                head(:ok)
+            else
+                head(:unprocessable_entity)
+            end
         else 
             head(:unprocessable_entity)
         end 
+    end
+
+    def fetch_by_user
+        render :json => current_user.arguments
     end
     
 
 # Anything after 'private' restricts the user from accessing the params -- keeps it secret
     private
     def argument_params
-        params.require(:argument).permit(:user_id, :topic_id, :content, :link, :stance)
+        params.require(:argument).permit(:user_id, :topic_id, :content, :link, :stance, :user_name)
     end
 end
