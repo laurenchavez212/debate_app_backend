@@ -5,5 +5,6 @@ json.call(
     :topic_id, 
     :content, 
     :link, 
-    :stance
+    :stance,
+    :user_name
 )

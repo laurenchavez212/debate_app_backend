@@ -20,6 +20,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'mini_magick', '~> 4.8'
 gem 'devise'
 gem 'simple_token_authentication', '~> 1.0'
+gem 'omniauth-facebook'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
